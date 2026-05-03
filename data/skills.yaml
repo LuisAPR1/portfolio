@@ -1,0 +1,28 @@
+# Tech stack shown on the homepage marquee. Each row scrolls horizontally.
+# The icon for each entry is looked up in data/tech_icons.yaml; missing entries
+# render as text-only badges, which still look clean on the dark theme.
+rows:
+  - name: "Languages"
+    items:
+      - "Java"
+      - "Python"
+      - "JavaScript"
+      - "TypeScript"
+      - "HTML"
+      - "CSS"
+      - "C#"
+      - "PHP"
+      - "SQL"
+      - "C/C++"
+  - name: "Frameworks & Tools"
+    items:
+      - "React"
+      - "Node.js"
+      - "Express"
+      - "FastAPI"
+      - "Docker"
+      - "Git"
+      - "Solidity"
+      - "Scikit-learn"
+      - "Material-UI"
+      - "MySQL"

@@ -1,0 +1,24 @@
+# Work experience entries displayed under the "Experience" heading on the homepage.
+- company: "Instituto Superior Técnico"
+  company_url: "https://fenix.tecnico.ulisboa.pt/cursos/meic-t/curriculo"
+  role: "MSc Student in Computer Science and Engineering"
+  period: "Sep. 2025 - Present"
+  location: "Lisbon, Portugal"
+  description:
+    - "Pursuing a Master's at IST with a specialization in Artificial Intelligence and Data Science."
+    - "MSc courses completed: Advanced Programming, High-Reliability Systems, Data Science, Data Analysis and Integration, Cybersecurity Forensics."
+    - "Currently taking: Autonomous Agents and Multi-Agent Systems, Cloud Computing and Virtualization."
+
+- company: "University of Algarve"
+  company_url: "https://www.ualg.pt/curso/1478"
+  role: "BSc in Computer Engineering, Final grade 15/20"
+  period: "Sep. 2022 - Jun. 2025"
+  location: "Faro, Portugal"
+  description: "Strong foundation in mathematics, physics, algorithms, databases, networking, and full-stack development."
+
+- company: "DigitSigma"
+  company_url: "https://www.ds.pt/"
+  role: "Software & Web Developer (Trainee)"
+  period: "Jul. 2022 - Aug. 2022"
+  location: "Loulé, Portugal"
+  description: "Built web applications and Windows Forms (.NET) solutions tying together databases, APIs, and responsive interfaces. Stack: C#, PHP, JavaScript, HTML/CSS, Bootstrap, Axios, Ajax. Paused the internship to start the BSc in Computer Engineering."

@@ -1,0 +1,167 @@
+{{ define "main" }}
+{{- $home := site.Params.home -}}
+
+{{/* ---------- Side anchor nav ---------- */}}
+<nav class="side-nav fixed left-2 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-6 z-50">
+  <style>.nav-link{display:flex;align-items:center;position:relative;padding:15px;margin:-15px}.nav-indicator{width:2px;height:30px;background-color:#343438;transition:all .3s cubic-bezier(.4,0,.2,1)}.nav-link:hover .nav-indicator{height:50px;background-color:#31929a}.nav-tooltip{position:absolute;left:32px;top:50%;transform:translateY(-50%);background-color:#18181b;border:1px solid #27272a;padding:4px 8px;border-radius:4px;font-size:12px;color:#a1a1aa;opacity:0;pointer-events:none;transition:opacity .3s;white-space:nowrap}.nav-link:hover .nav-tooltip{opacity:1}</style>
+  <a class="nav-link group" href="#what-i-work-with"><div class="nav-indicator"></div><span class="nav-tooltip">Skills</span></a>
+  <a class="nav-link group" href="#experience"><div class="nav-indicator"></div><span class="nav-tooltip">Currently</span></a>
+  <a class="nav-link group" href="#projects"><div class="nav-indicator"></div><span class="nav-tooltip">Projects</span></a>
+  <a class="nav-link group" href="#blog"><div class="nav-indicator"></div><span class="nav-tooltip">Posts</span></a>
+  <a class="nav-link group" href="#contact"><div class="nav-indicator"></div><span class="nav-tooltip">Contact</span></a>
+</nav>
+
+{{/* ---------- Hero card ---------- */}}
+<div class="card">
+  <div class="flex flex-col gap-1">
+    <div class="flex flex-row w-full justify-between gap-2 flex-wrap">
+      <h1 class="unset text-4xl text-left" style="margin:0">{{ site.Title }}</h1>
+      <div class="flex flex-wrap gap-2 justify-end" style="margin:0">
+        <a aria-label="Resume" href="{{ site.Params.resumePDF }}" target="_blank" style="margin:0">
+          <div class="card flex items-center text-sm font-bold gap-2" style="padding:10px;line-height:0;margin:0">
+            <div class="w-[20px] h-[20px]"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 01-2-2V4a2 2 0 012-2h8a2.4 2.4 0 011.704.706l3.588 3.588A2.4 2.4 0 0120 8v12a2 2 0 01-2 2z"/><path d="M14 2v5a1 1 0 001 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
+            <span class="hidden sm:block">Resume</span>
+          </div>
+        </a>
+        <a aria-label="LinkedIn" href="{{ site.Params.linkedinURL }}" target="_blank" style="margin:0">
+          <div class="card" style="padding:10px;line-height:0;margin:0"><div class="w-[20px] h-[20px]"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></div></div>
+        </a>
+        <a aria-label="GitHub" href="{{ site.Params.githubURL }}" target="_blank" style="margin:0">
+          <div class="card" style="padding:10px;line-height:0;margin:0"><div class="w-[20px] h-[20px]"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.3 1.9 1.3 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.7-5.5 6 .5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0012 .3"/></svg></div></div>
+        </a>
+        <a aria-label="Email" href="mailto:{{ site.Params.emailAddress }}" target="_blank" style="margin:0">
+          <div class="card" style="padding:10px;line-height:0;margin:0"><div class="w-[20px] h-[20px]"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg></div></div>
+        </a>
+      </div>
+    </div>
+    <p class="text-gray-400 mb-0 mt-1 text-sm text-left">{{ $home.heroLocation }}</p>
+    <p class="text-gray-300 mt-3 mb-0 font-semibold text-left">{{ $home.heroHeadline }}</p>
+    <p class="text-gray-400 mt-2 mb-0 text-left">{{ $home.heroDescription }}</p>
+    <a href="/about/" class="text-accent font-semibold mt-4 inline-block text-left">More about me &rarr;</a>
+  </div>
+</div>
+
+{{/* ---------- What I work with ---------- */}}
+<div class="mt-16">
+  <h1 id="what-i-work-with">What I work with</h1>
+  {{ range site.Data.skills.rows }}
+  {{ $row := . }}
+  <div class="group flex overflow-hidden p-2 [--duration:30s] [--gap:1rem] [gap:var(--gap)] flex-row relative">
+    <div class="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused]" style="max-width:none">
+      {{ range seq 1 2 }}
+      <div class="flex gap-[1rem] items-center" style="max-width:none">
+        {{ range $row.items }}
+          {{ $svg := index site.Data.tech_icons . }}
+          <div class="flex items-center gap-2 mr-4">
+            {{ if $svg }}<div class="h-8 icn">{{ $svg | safeHTML }}</div>{{ end }}
+            <span class="text-gray-200 text-sm">{{ . }}</span>
+          </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+  <a href="/resume/#skills" class="text-accent font-semibold mt-4 inline-block">Full skills breakdown &rarr;</a>
+
+  {{/* ---------- Currently (current role only — full history on /resume/) ---------- */}}
+  <h1 id="experience" class="mt-16">Currently</h1>
+  <section class="relative flex flex-col gap-4">
+    {{ with index site.Data.experience 0 }}
+    <div class="card">
+      <div class="custom flex justify-between items-start flex-wrap gap-2">
+        <div class="custom">
+          <h2 class="custom text-2xl font-semibold" style="margin:0;color:#fff">
+            {{ if .company_url }}<a class="custom exp-link" href="{{ .company_url }}" target="_blank" rel="noopener">{{ .company }}</a>{{ else }}{{ .company }}{{ end }}
+          </h2>
+          <p class="custom text-gray-300" style="margin:0.25rem 0 0">{{ .role }}</p>
+        </div>
+        <div class="custom text-right">
+          <p class="custom text-gray-400" style="margin:0">{{ .period }}</p>
+          {{ with .location }}<p class="custom text-gray-500 text-sm" style="margin:0.25rem 0 0">{{ . }}</p>{{ end }}
+        </div>
+      </div>
+      {{ with .description }}
+        {{ if reflect.IsSlice . }}
+          {{ range $i, $p := . }}
+          <p class="custom text-gray-400" style="margin:{{ if eq $i 0 }}0.75rem{{ else }}0.45rem{{ end }} 0 0">{{ $p }}</p>
+          {{ end }}
+        {{ else }}
+          <p class="custom text-gray-400" style="margin:0.75rem 0 0">{{ . }}</p>
+        {{ end }}
+      {{ end }}
+    </div>
+    {{ end }}
+  </section>
+  <a href="/resume/#experience" class="text-accent font-semibold mt-4 inline-block">Full education &amp; work history &rarr;</a>
+
+  {{/* ---------- Featured projects (top 3 by weight; full list at /projects/) ---------- */}}
+  <section id="projects" class="mt-16">
+    <h1>Featured projects</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {{ range first 3 (where (where site.RegularPages "Section" "projects") "Kind" "page").ByWeight }}
+      <a href="{{ .RelPermalink }}" class="group relative card overflow-hidden p-0 custom block">
+        {{ with .Params.cover_image }}<img src="{{ . }}" alt="{{ $.Title }}" class="w-full aspect-video object-cover" loading="lazy">{{ end }}
+        <div class="p-4">
+          <h2 class="text-2xl font-semibold mb-2">{{ .Title }}</h2>
+          {{ with .Params.tech_stack }}
+          <div class="flex gap-2 flex-wrap mb-3 custom">
+            {{ range . }}{{ partial "tech-icon.html" . }}{{ end }}
+          </div>
+          {{ end }}
+          {{ with or .Description .Params.description }}<p class="text-gray-400 mb-0 text-sm">{{ . }}</p>{{ end }}
+          <span class="text-accent font-semibold mt-3 inline-block">Learn more &rarr;</span>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+    <a href="/projects/" class="text-accent font-semibold mt-6 inline-block">See all projects &rarr;</a>
+  </section>
+
+  {{/* ---------- Latest blog posts ---------- */}}
+  {{ $posts := first 3 (where (where site.RegularPages "Section" "posts") "Kind" "page").ByDate.Reverse }}
+  {{ if $posts }}
+  <section id="blog" class="mt-16">
+    <h1>Latest posts</h1>
+    <div class="mx-auto flex flex-col gap-2">
+      {{ range $posts }}
+      <article class="flex w-full flex-col items-start justify-between">
+        <div class="flex items-center gap-x-4 text-sm custom mb-0">
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" style="color:var(--color-subtext)">{{ .Date.Format "2.1.2006" }}</time>
+        </div>
+        <div class="group relative custom">
+          <h2 class="mt-1 mb-0 text-xl font-semibold leading-6 custom">
+            <a href="{{ .RelPermalink }}"><span class="absolute inset-0"></span>{{ .Title }}</a>
+          </h2>
+          {{ with or .Description .Params.description }}<p class="line-clamp-3 text-sm leading-6 custom mt-1" style="color:var(--color-subtext)">{{ . }}</p>{{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+    <a href="/posts/" class="text-accent font-semibold mt-4 inline-block">All posts &rarr;</a>
+  </section>
+  {{ end }}
+
+  {{/* ---------- Contact CTA ---------- */}}
+  <section id="contact" class="mt-16">
+    <div class="card">
+      <h2 class="custom" style="margin:0;color:#fff;font-size:1.875rem;font-weight:700;line-height:1.2">Let's talk</h2>
+      <p class="custom text-gray-400" style="margin:0.75rem 0 1.25rem">Open to collaboration, internships, research opportunities, and interesting technical problems. Email is fastest.</p>
+      <a href="/contact/" class="text-accent font-semibold inline-block custom">Get in touch &rarr;</a>
+    </div>
+  </section>
+</div>
+
+<style>
+  .hero h1{text-align:center;font-size:60px;line-height:1}
+  .unset{margin:0!important}
+  /* Overrides the global `.content *` rule that gives every descendant `margin-left/right: auto`,
+     which in flex layouts cancels `align-items: stretch` and visually centers short paragraphs. */
+  .text-left{text-align:left;margin-left:0!important;margin-right:0!important}
+  /* Marquee: track contains two identical copies separated by --gap, so a seamless loop must
+     translate by exactly one copy width + one gap = -50% - gap/2. The default rule in
+     styletw.css translates by -100% - gap, which scrolls both copies fully off-screen and
+     produces a visible blank period before the animation restarts. */
+  @keyframes marquee{0%{transform:translateX(0)}to{transform:translateX(calc(-50% - var(--gap) / 2))}}
+</style>
+{{ end }}

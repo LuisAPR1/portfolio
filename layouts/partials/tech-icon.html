@@ -1,0 +1,9 @@
+{{- /* Render a tech-stack badge: SVG icon (from data/tech_icons.yaml) + name. */ -}}
+{{- $name := . -}}
+{{- $svg := index site.Data.tech_icons $name -}}
+<div class="card p-2 flex items-center custom mb-0">
+{{- if $svg -}}
+<div class="h-6 mr-2 custom icn">{{ $svg | safeHTML }}</div>
+{{- end -}}
+<span>{{ $name }}</span>
+</div>

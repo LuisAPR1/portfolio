@@ -1,0 +1,2 @@
+{{- $description := or .Description (.Params.description) site.Params.description -}}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"{{ site.Params.author }}","url":"{{ site.BaseURL }}","image":"{{ site.BaseURL }}{{ site.Params.faviconWebp | strings.TrimPrefix "/" }}","sameAs":["{{ site.Params.githubURL }}","{{ site.Params.instagramURL }}"],"jobTitle":"Full-Stack Web Developer","description":{{ $description | jsonify }}}</script>

@@ -1,0 +1,169 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\linespread{1.15}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}} 
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item 
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt} 
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Lu\'is  Rosa} \\ \vspace{5pt}
+    \small +351 935 601 172 $|$ \href{mailto:luis.rosa17@hotmail.com}{\underline{luis.rosa17@hotmail.com}} $|$ 
+    \href{https://linkedin.com/in/luisAPR1}{\underline{linkedin.com/in/luisapr1}} $|$
+    \href{https://github.com/LuisAPR1}{\underline{github.com/LuisAPR1}} \\
+    \small Agualva-Cac\'em, Lisbon, Portugal
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Instituto Superior T\'ecnico}{Lisbon, Portugal}
+      {Master's in Computer Science and Engineering}{Sep. 2025 -- Present}
+    \resumeSubheading
+      {University of Algarve}{Faro, Portugal}
+      {Bachelor's in Computer Engineering (Final Grade: 15/20)}{Sep. 2022 -- Jun. 2025}
+      \resumeSubHeadingListEnd
+
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software and Web Developer (Trainee)}{Jul. 2022 -- Aug. 2022}
+      {DigitSigma}{Loul\'e, Portugal}
+      \resumeItemListStart
+        \resumeItem{Development of Web applications and Windows Forms (.NET).}
+        \resumeItem{Database management and implementation of full-stack features.}
+        \resumeItem{Technologies used: C\#, PHP, JavaScript, HTML, Bootstrap, Axios, and Ajax.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+    \resumeSubHeadingListStart
+    
+      \resumeProjectHeading
+          {\textbf{Permissioned Blockchain \& BFT Consensus} $|$ \emph{Java, Hyperledger Besu, Solidity, UDP}}{}
+          \resumeItemListStart
+            \resumeItem{End-to-end development of DepChain, a highly dependable permissioned blockchain system, implementing both the consensus layer and a transaction processing engine to ensure Byzantine Fault Tolerance (BFT).}
+            \resumeItem{Systematic implementation of the Basic HotStuff consensus algorithm over unreliable networks (UDP), building network abstractions such as authenticated perfect links and failure detectors to handle crash and malicious faults.}
+            \resumeItem{Integration of EVM (Hyperledger Besu) for executing Solidity smart contracts, featuring a custom gas-fee mechanism and an ERC-20 token implementation  redesigned to prevent Approval Frontrunning attacks.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Classification \& Time Series Forecasting} $|$ \emph{Python, Scikit-learn, ARIMA, LSTM}}{}
+          \resumeItemListStart
+            \resumeItem{End-to-end Data Science pipeline applied to two real-world problems: predicting road accident severity and detecting flight cancellations, supporting decision-making in safety and logistics.}
+            \resumeItem{Systematic implementation and comparison of multiple classification models (Na\"ive Bayes, KNN, Decision Trees, Random Forest, Gradient Boosting, MLP) with a focus on imbalanced class scenarios.}
+            \resumeItem{Traffic volume forecasting on high-frequency time series, exploring statistical models (ARIMA) and deep learning (LSTM) to support transportation infrastructure planning.}
+          \resumeItemListEnd
+          
+      \resumeProjectHeading
+          {\textbf{UK Real Estate Data Warehouse \& Analytics} $|$ \emph{SQL, Pentaho (ETL/OLAP), MySQL, MDX}}{}
+          \resumeItemListStart
+            \resumeItem{Development of a complete Business Intelligence solution for the analysis of millions of UK real estate transaction records (Price Paid Data).}
+            \resumeItem{Data Warehouse design (Star Schema) and implementation of complex ETL pipelines with Pentaho Data Integration for temporal and geographical data transformation.}
+            \resumeItem{Creation of OLAP cubes and strategic reports (Saiku/Report Designer) to monitor KPIs such as year-over-year growth and sales by district, enabling data-driven decision-making.}
+          \resumeItemListEnd
+          
+      \resumeProjectHeading
+          {\textbf{MNIST Neural Network} $|$ \emph{Python, Multi-layer Neural Network, NumPy}}{}
+          \resumeItemListStart
+            \resumeItem{Implementation of a Multi-layer Neural Network (MLP) for handwritten digit classification (MNIST).}
+            \resumeItem{Development and application of the Backpropagation algorithm for model training and weight adjustment.}
+            \resumeItem{Use of cross-validation for optimisation and evaluation of pattern recognition accuracy.}
+          \resumeItemListEnd
+          
+      \resumeProjectHeading
+          {\textbf{Distributed Key-Value Store} $|$ \emph{FastAPI, Redis, RabbitMQ, CockroachDB}}{}
+          \resumeItemListStart
+            \resumeItem{Implementation of a distributed storage solution capable of managing key-value pairs across multiple nodes.}
+            \resumeItem{Resilient architecture featuring an API layer, caching, message queues, and a distributed database.}
+            \resumeItem{Implementation of monitoring, autoscaling, and health checks to ensure consistency and fault tolerance.}
+          \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C\#, Java, Python, JavaScript, PHP, SQL, HTML/CSS, C/C++} \\
+     \textbf{Frameworks/Libraries}{: React, Node.js, Express, FastAPI, .NET, Scikit-learn, Material-UI, Bootstrap} \\
+     \textbf{Data \& Analytics}{: MySQL, Pentaho (PDI/Report Designer), OLAP, MDX, ARIMA, LSTM, Pandas, NumPy, Redis, RabbitMQ, CockroachDB} \\
+     \textbf{Infrastructure \& Tools}{: Git, Docker, Arduino} \\
+     \textbf{Spoken Languages}{: Portuguese (Native/C2), English (B2)}
+    }}
+ \end{itemize}
+
+\end{document}

@@ -1,0 +1,24 @@
+# Hugo build output
+/public/
+/resources/_gen/
+
+# Hugo lock file
+.hugo_build.lock
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Python (legacy, no longer needed)
+.venv/
+__pycache__/
+*.pyc
+
+# Old tooling (can be deleted manually)
+/tools/
+/site/
+/output/

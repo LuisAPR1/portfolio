@@ -1,0 +1,16 @@
+{{ define "main" }}
+<h1 class="mb-0">{{ .Title }}</h1>
+{{ with or .Description .Params.description }}<p class="mt-1 text-gray-400 mb-4">{{ . }}</p>{{ end }}
+<div class="mx-auto flex flex-col gap-2">
+  {{ range .Pages.ByDate.Reverse }}
+  <article class="flex w-full flex-col items-start justify-between">
+    <div class="group relative custom">
+      <h3 class="mt-1 mb-0 text-xl font-semibold leading-6 custom">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h3>
+      {{ with or .Description .Params.description }}<p class="line-clamp-3 text-sm leading-6 custom mt-1" style="color:var(--color-subtext)">{{ . }}</p>{{ end }}
+    </div>
+  </article>
+  {{ end }}
+</div>
+{{ end }}

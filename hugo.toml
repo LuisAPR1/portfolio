@@ -1,0 +1,51 @@
+baseURL = "https://example.com/"
+languageCode = "en-us"
+title = "Luís Rosa"
+
+[params]
+  description = "Computer Science MSc student at Instituto Superior Técnico (Lisbon), full-stack problem solver specializing in AI, data science, and distributed systems."
+  keywords = "Software Engineer,Computer Science,AI,Data Science,Distributed Systems,Full-Stack,Portfolio"
+  author = "Luís Rosa"
+  themeColor = "#31929A"
+  accentColor = "#31929A"
+  ogImage = "/favicon.webp"
+  twitterImage = "/favicon.webp"
+  faviconWebp = "/favicon.webp"
+  appleTouchIcon = "/apple-touch-icon.png"
+  webmanifest = "/site.webmanifest"
+  githubURL = "https://github.com/LuisAPR1"
+  linkedinURL = "https://www.linkedin.com/in/luisAPR1"
+  emailAddress = "luis.rosa17@hotmail.com"
+  phoneNumber = "+351 935 601 172"
+  resumePDF = "/cv.pdf"
+  resumeTeX = "/cv.tex"
+
+[params.home]
+  heroLocation = "Agualva-Cacém, Lisbon, Portugal"
+  heroHeadline = "MSc Computer Science @ IST · full-stack problem solver"
+  heroDescription = "Computer Science Master's student at Instituto Superior Técnico (Lisbon), specializing in Artificial Intelligence and Data Science. I like building things end-to-end across distributed systems, data pipelines, machine learning, and full-stack web. Comfortable jumping across the stack to ship working software."
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 10
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 20
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 40
+  [[menu.main]]
+    name = "Resume"
+    url = "/resume/"
+    weight = 50
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 60

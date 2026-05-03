@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div class="card">
+  <div class="flex gap-4 items-center">
+    <h1 class="my-0 custom" style="margin-left:0">{{ .Title }}</h1>
+  </div>
+  {{ with .Params.tech_stack }}
+  <div class="flex gap-2 mt-4 custom flex-wrap">
+    {{ range . }}{{ partial "tech-icon.html" . }}{{ end }}
+  </div>
+  {{ end }}
+  {{ with or .Description .Params.description }}<p class="mb-0 text-gray-400 custom">{{ . }}</p>{{ end }}
+  {{ with .Params.live_url }}
+  <a class="inline-block mt-6 group custom" href="{{ . }}" target="_blank">
+    <button class="flex items-center gap-2 px-3 py-1 text-lg font-semibold text-white bg-transparent border border-[#27272a] rounded-md backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-white/60 cursor-pointer">
+      {{ or $.Params.live_label "Show website" }}
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 transition-transform duration-300 ease-out group-hover:translate-x-1 group-hover:-translate-y-1"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/></svg>
+    </button>
+  </a>
+  {{ end }}
+</div>
+{{ .Content }}
+{{ with .Params.screenshots }}
+<div class="flex gap-2 flex-col mt-4">
+  {{ range . }}
+  <a aria-label="Screenshot" href="{{ . }}" target="_blank">
+    <img alt="Screenshot" class="w-full rounded-md" src="{{ . }}">
+  </a>
+  {{ end }}
+</div>
+{{ end }}
+{{ end }}

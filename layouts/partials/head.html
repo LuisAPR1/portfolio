@@ -1,0 +1,38 @@
+{{- $title := .Title -}}
+{{- $siteTitle := site.Title -}}
+{{- $fullTitle := cond .IsHome $siteTitle (printf "%s | %s" $title $siteTitle) -}}
+{{- $description := or .Description (.Params.description) site.Params.description -}}
+{{- $ogImage := or .Params.og_image .Params.cover_image site.Params.ogImage -}}
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="{{ $description }}">
+<meta name="keywords" content="{{ site.Params.keywords }}">
+<meta name="author" content="{{ site.Params.author }}">
+<meta name="theme-color" content="{{ site.Params.themeColor }}">
+<meta property="og:title" content="{{ $fullTitle }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ cond (eq .Section "posts") "article" "website" }}">
+<meta property="og:image" content="{{ $ogImage }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $fullTitle }}">
+<meta name="twitter:description" content="{{ $description }}">
+<meta name="twitter:image" content="{{ $ogImage }}">
+<title>{{ $fullTitle }}</title>
+<link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="/assets/css/styletw.css" type="text/css" media="all">
+<link rel="icon" type="image/webp" href="{{ site.Params.faviconWebp }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.Params.appleTouchIcon }}">
+<link rel="manifest" href="{{ site.Params.webmanifest }}">
+<meta name="accent-color" content="{{ site.Params.accentColor }}">
+<meta name="msapplication-TileColor" content="{{ site.Params.themeColor }}">
+{{ partial "schema-person.html" . }}
+{{- if eq .Section "posts" -}}{{- if not .IsNode -}}
+{{ partial "schema-blogposting.html" . }}
+{{- end -}}{{- end -}}
+{{- if eq .Section "projects" -}}{{- if not .IsNode -}}
+{{ partial "schema-creativework.html" . }}
+{{- end -}}{{- end -}}
+</head>

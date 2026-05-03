@@ -1,0 +1,21 @@
+{
+  "name": "Jakub Žitník",
+  "short_name": "J. Žitník",
+  "description": "Full-Stack Web Developer - Jakub Žitník",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#31929A",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.webp",
+      "sizes": "300x300",
+      "type": "image/webp"
+    }
+  ]
+} 
