@@ -1,0 +1,3 @@
+[build]
+  publish = "public"
+  command = "echo 'Pre-built site — skipping build'"
