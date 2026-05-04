@@ -20,12 +20,12 @@
 <meta name="twitter:description" content="{{ $description }}">
 <meta name="twitter:image" content="{{ $ogImage }}">
 <title>{{ $fullTitle }}</title>
-<link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="all">
-<link rel="stylesheet" href="/assets/css/styletw.css" type="text/css" media="all">
-<link rel="icon" type="image/webp" href="{{ site.Params.faviconWebp }}">
+<link rel="stylesheet" href="{{ "assets/css/style.css" | relURL }}" type="text/css" media="all">
+<link rel="stylesheet" href="{{ "assets/css/styletw.css" | relURL }}" type="text/css" media="all">
+<link rel="icon" type="image/webp" href="{{ site.Params.faviconWebp | strings.TrimPrefix "/" | relURL }}">
 <link rel="canonical" href="{{ .Permalink }}">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ site.Params.appleTouchIcon }}">
-<link rel="manifest" href="{{ site.Params.webmanifest }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.Params.appleTouchIcon | strings.TrimPrefix "/" | relURL }}">
+<link rel="manifest" href="{{ site.Params.webmanifest | strings.TrimPrefix "/" | relURL }}">
 <meta name="accent-color" content="{{ site.Params.accentColor }}">
 <meta name="msapplication-TileColor" content="{{ site.Params.themeColor }}">
 {{ partial "schema-person.html" . }}

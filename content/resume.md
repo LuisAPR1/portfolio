@@ -7,13 +7,13 @@ description: "MSc Computer Science student at IST. Distributed systems, machine 
 <p class="mt-1 text-gray-400 mb-4">A summary of my background, education, and professional experience. A Latex and full PDF version are available below.</p>
 
 <div class="custom flex gap-3 flex-wrap justify-center" style="margin-top:2.5rem;margin-bottom:4rem;">
-  <a class="custom inline-block group" href="/cv.pdf" target="_blank">
+  <a class="custom inline-block group" href="{{< u "/cv.pdf" >}}" target="_blank">
     <button class="custom flex items-center gap-3 font-semibold text-white bg-transparent border border-[#27272a] rounded-md backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-white/60 cursor-pointer" style="padding:0.85rem 1.4rem;font-size:1.05rem;">
       Download PDF
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
     </button>
   </a>
-  <a class="custom inline-block group" href="/cv.tex" target="_blank">
+  <a class="custom inline-block group" href="{{< u "/cv.tex" >}}" target="_blank">
     <button class="custom flex items-center gap-3 font-semibold text-white bg-transparent border border-[#27272a] rounded-md backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-white/60 cursor-pointer" style="padding:0.85rem 1.4rem;font-size:1.05rem;">
       LaTeX source
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
@@ -64,16 +64,16 @@ description: "MSc Computer Science student at IST. Distributed systems, machine 
 
 <h2 id="featured-projects">Featured Projects</h2>
 
-<p>A selection of the highlights below. For the full project list with technical deep-dives, see <a href="/projects/">Projects</a>.</p>
+<p>A selection of the highlights below. For the full project list with technical deep-dives, see <a href="{{< u "/projects/" >}}">Projects</a>.</p>
 
 <ul class="resume-list project-list">
-  <li class="custom"><strong><a href="/projects/uk-data-warehouse/">ETL &amp; OLAP Data Warehouse Pipeline</a></strong> · End-to-end data warehousing solution with ETL processes and OLAP analytics for multidimensional analysis.</li>
-  <li class="custom"><strong><a href="/projects/depchain/">Permissioned Blockchain with BFT Consensus</a></strong> · DepChain: permissioned blockchain with HotStuff BFT consensus, EVM smart contracts, and frontrunning-resistant ERC-20 approvals.</li>
-  <li class="custom"><strong><a href="/projects/flight-cancellation-predictor/">ML Prediction Pipeline</a></strong> · End-to-end machine learning pipeline with multiple classifiers and a FastAPI interface for real-time predictions and batch evaluation.</li>
-  <li class="custom"><strong><a href="/projects/digit-recognition-nn-v2/">Digit Recognition NN V2</a></strong> · End-to-end MNIST digit recognizer with a from-scratch Java neural network and a web playground for live inference.</li>
-  <li class="custom"><strong><a href="/projects/distributed-kv-store/">Distributed Key-Value Storage System</a></strong> · Resilient architecture with FastAPI, Redis, RabbitMQ, CockroachDB, observability, and autoscaling.</li>
-  <li class="custom"><strong><a href="/projects/cinebyte/">React + TS REST API Movie App</a></strong> · Full-stack movies and TV shows app with React, TypeScript, and a Node.js REST API, powered by the TMDb API.</li>
-  <li class="custom"><strong><a href="/projects/physics-engine/">2D Physics Engine</a></strong> · Web-based 2D physics simulation built from scratch with p5.js, featuring rigid body dynamics, AABB collisions, and Verlet integration.</li>
+  <li class="custom"><strong><a href="{{< u "/projects/uk-data-warehouse/" >}}">ETL &amp; OLAP Data Warehouse Pipeline</a></strong> · End-to-end data warehousing solution with ETL processes and OLAP analytics for multidimensional analysis.</li>
+  <li class="custom"><strong><a href="{{< u "/projects/depchain/" >}}">Permissioned Blockchain with BFT Consensus</a></strong> · DepChain: permissioned blockchain with HotStuff BFT consensus, EVM smart contracts, and frontrunning-resistant ERC-20 approvals.</li>
+  <li class="custom"><strong><a href="{{< u "/projects/flight-cancellation-predictor/" >}}">ML Prediction Pipeline</a></strong> · End-to-end machine learning pipeline with multiple classifiers and a FastAPI interface for real-time predictions and batch evaluation.</li>
+  <li class="custom"><strong><a href="{{< u "/projects/digit-recognition-nn-v2/" >}}">Digit Recognition NN V2</a></strong> · End-to-end MNIST digit recognizer with a from-scratch Java neural network and a web playground for live inference.</li>
+  <li class="custom"><strong><a href="{{< u "/projects/distributed-kv-store/" >}}">Distributed Key-Value Storage System</a></strong> · Resilient architecture with FastAPI, Redis, RabbitMQ, CockroachDB, observability, and autoscaling.</li>
+  <li class="custom"><strong><a href="{{< u "/projects/cinebyte/" >}}">React + TS REST API Movie App</a></strong> · Full-stack movies and TV shows app with React, TypeScript, and a Node.js REST API, powered by the TMDb API.</li>
+  <li class="custom"><strong><a href="{{< u "/projects/physics-engine/" >}}">2D Physics Engine</a></strong> · Web-based 2D physics simulation built from scratch with p5.js, featuring rigid body dynamics, AABB collisions, and Verlet integration.</li>
 </ul>
 
 

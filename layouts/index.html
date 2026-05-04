@@ -17,7 +17,7 @@
     <div class="flex flex-row w-full justify-between gap-2 flex-wrap">
       <h1 class="unset text-4xl text-left" style="margin:0">{{ site.Title }}</h1>
       <div class="flex flex-wrap gap-2 justify-end" style="margin:0">
-        <a aria-label="Resume" href="{{ site.Params.resumePDF }}" target="_blank" style="margin:0">
+        <a aria-label="Resume" href="{{ site.Params.resumePDF | strings.TrimPrefix "/" | relURL }}" target="_blank" style="margin:0">
           <div class="card flex items-center text-sm font-bold gap-2" style="padding:10px;line-height:0;margin:0">
             <div class="w-[20px] h-[20px]"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 01-2-2V4a2 2 0 012-2h8a2.4 2.4 0 011.704.706l3.588 3.588A2.4 2.4 0 0120 8v12a2 2 0 01-2 2z"/><path d="M14 2v5a1 1 0 001 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
             <span class="hidden sm:block">Resume</span>
@@ -37,7 +37,7 @@
     <p class="text-gray-400 mb-0 mt-1 text-sm text-left">{{ $home.heroLocation }}</p>
     <p class="text-gray-300 mt-3 mb-0 font-semibold text-left">{{ $home.heroHeadline }}</p>
     <p class="text-gray-400 mt-2 mb-0 text-left">{{ $home.heroDescription }}</p>
-    <a href="/about/" class="text-accent font-semibold mt-4 inline-block text-left">More about me &rarr;</a>
+    <a href="{{ "about/" | relURL }}" class="text-accent font-semibold mt-4 inline-block text-left">More about me &rarr;</a>
   </div>
 </div>
 
@@ -62,7 +62,7 @@
     </div>
   </div>
   {{ end }}
-  <a href="/resume/#skills" class="text-accent font-semibold mt-4 inline-block">Full skills breakdown &rarr;</a>
+  <a href="{{ "resume/#skills" | relURL }}" class="text-accent font-semibold mt-4 inline-block">Full skills breakdown &rarr;</a>
 
   {{/* ---------- Currently (current role only — full history on /resume/) ---------- */}}
   <h1 id="experience" class="mt-16">Currently</h1>
@@ -93,7 +93,7 @@
     </div>
     {{ end }}
   </section>
-  <a href="/resume/#experience" class="text-accent font-semibold mt-4 inline-block">Full education &amp; work history &rarr;</a>
+  <a href="{{ "resume/#experience" | relURL }}" class="text-accent font-semibold mt-4 inline-block">Full education &amp; work history &rarr;</a>
 
   {{/* ---------- Featured projects (top 3 by weight; full list at /projects/) ---------- */}}
   <section id="projects" class="mt-16">
@@ -115,7 +115,7 @@
       </a>
       {{ end }}
     </div>
-    <a href="/projects/" class="text-accent font-semibold mt-6 inline-block">See all projects &rarr;</a>
+    <a href="{{ "projects/" | relURL }}" class="text-accent font-semibold mt-6 inline-block">See all projects &rarr;</a>
   </section>
 
   {{/* ---------- Latest blog posts ---------- */}}
@@ -138,7 +138,7 @@
       </article>
       {{ end }}
     </div>
-    <a href="/posts/" class="text-accent font-semibold mt-4 inline-block">All posts &rarr;</a>
+    <a href="{{ "posts/" | relURL }}" class="text-accent font-semibold mt-4 inline-block">All posts &rarr;</a>
   </section>
   {{ end }}
 
@@ -147,7 +147,7 @@
     <div class="card">
       <h2 class="custom" style="margin:0;color:#fff;font-size:1.875rem;font-weight:700;line-height:1.2">Let's talk</h2>
       <p class="custom text-gray-400" style="margin:0.75rem 0 1.25rem">Open to collaboration, internships, research opportunities, and interesting technical problems. Email is fastest.</p>
-      <a href="/contact/" class="text-accent font-semibold inline-block custom">Get in touch &rarr;</a>
+      <a href="{{ "contact/" | relURL }}" class="text-accent font-semibold inline-block custom">Get in touch &rarr;</a>
     </div>
   </section>
 </div>

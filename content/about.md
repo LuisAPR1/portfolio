@@ -62,6 +62,6 @@ description: "Computer Science MSc student, full-stack problem solver, and lifel
 
 <p>When I'm not coding, I'm reading about distributed systems and sketching ideas for the next side project. I speak Portuguese (native, C2) and English (B2).</p>
 
-<p>If any of this resonates and you'd like to collaborate or chat, <a href="/contact/">get in touch</a>.</p>
+<p>If any of this resonates and you'd like to collaborate or chat, <a href="{{< u "/contact/" >}}">get in touch</a>.</p>
 
 </div>

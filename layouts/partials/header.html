@@ -1,11 +1,11 @@
 {{- $current := .RelPermalink -}}
 <header class="site-header">
 <nav class="site-nav">
-<a class="logo" href="{{ "/" | relURL }}">{{ site.Title }}</a>
+<a class="logo" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
 <ul class="main-menu">
 {{- range site.Menus.main }}
 {{- $isActive := or (eq $current .URL) (and (ne .URL "/") (hasPrefix $current .URL)) }}
-<li><a href="{{ .URL }}"{{ if $isActive }} class="active"{{ end }}>{{ .Name }}</a></li>
+<li><a href="{{ .URL | relURL }}"{{ if $isActive }} class="active"{{ end }}>{{ .Name }}</a></li>
 {{- end }}
 </ul>
 </nav>
