@@ -1,3 +1,6 @@
 [build]
   publish = "public"
-  command = "echo 'Pre-built site — skipping build'"
+  command = "hugo --gc --minify"
+
+[build.environment]
+  HUGO_VERSION = "0.139.4"
