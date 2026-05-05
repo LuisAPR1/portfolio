@@ -1,14 +1,31 @@
 # Luís Rosa — Portfolio
 
-Personal portfolio website built with [Hugo](https://gohugo.io/).
+Personal portfolio website built with [Hugo](https://gohugo.io/).  
+**Live site:** [https://luispar1.tech](https://luispar1.tech)
 
-## 🚀 Live Site
+Deployed with GitHub + Vercel + Custom Domain.
 
-Deployed automatically via GitHub Pages on every push to `main`.
+## Contents
 
-## 📂 Project Structure
+- [Overview](#overview)
+- [Project Structure](#project-structure)
+- [Local Development](#local-development)
+- [Adding Content](#adding-content)
+- [License](#license)
+
+---
+
+## Overview
+
+A fast, minimal portfolio site showcasing projects and blog posts.  
+Features automatic deployments on every push to `main` via GitHub Actions and Vercel, served on a custom domain.
+
+---
+
+## Project Structure
 
 ```
+.
 ├── content/          # Markdown content (pages, posts, projects)
 ├── layouts/          # Hugo HTML templates
 ├── static/           # Static assets (CSS, JS, images, fonts, PDFs)
@@ -17,7 +34,9 @@ Deployed automatically via GitHub Pages on every push to `main`.
 └── .github/workflows # GitHub Pages deploy pipeline
 ```
 
-## 🛠️ Local Development
+---
+
+## Local Development
 
 ### Prerequisites
 
@@ -39,7 +58,9 @@ hugo --minify
 
 Output goes to `public/`.
 
-## 📝 Adding Content
+---
+
+## Adding Content
 
 ### New project
 
@@ -55,6 +76,8 @@ Then edit the frontmatter (`title`, `description`, `tech_stack`, etc.) and body.
 hugo new posts/my-post.md
 ```
 
-## 📄 License
+---
+
+## License
 
 © Luís Rosa. All rights reserved.
