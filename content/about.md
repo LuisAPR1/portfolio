@@ -1,6 +1,6 @@
 ---
 title: "About"
-description: "Computer Science MSc student, full-stack problem solver, and lifelong learner from Lisbon."
+description: "Computer Science MSc student, Full-Stack Problem Solver, and lifelong learner from Lisbon."
 ---
 
 <style>
@@ -32,7 +32,7 @@ description: "Computer Science MSc student, full-stack problem solver, and lifel
 <div class="about-page">
 
 <h1 class="mb-0">About me</h1>
-<p class="mt-1 text-gray-400 mb-4">Computer Science MSc student at IST, full-stack problem solver, and lifelong learner.</p>
+<p class="mt-1 text-gray-400 mb-4">Computer Science MSc student at IST, Full-Stack Problem Solver, and lifelong learner.</p>
 
 <p>Hi, I'm <strong>Luís Rosa</strong>. I'm currently pursuing a Master's in Computer Science and Engineering at <a class="prose-link" href="https://fenix.tecnico.ulisboa.pt/cursos/meic-t/curriculo" target="_blank">Instituto Superior Técnico</a> in Lisbon, with a specialization in Artificial Intelligence and Data Science. Before IST I completed a Bachelor's in Computer Engineering at the <a class="prose-link" href="https://www.ualg.pt/curso/1478" target="_blank">University of Algarve</a> with a final grade of 15/20.</p>
 
@@ -50,7 +50,7 @@ description: "Computer Science MSc student, full-stack problem solver, and lifel
 
 <p>Outside the curriculum, I independently develop and publish a wide range of projects on <a href="https://github.com/LuisAPR1" target="_blank">GitHub</a>, covering distributed systems, blockchain consensus, neural networks, compilers, physics engines, and full-stack apps.</p>
 
-<h2 id="how-i-work">How I work</h2>
+<h2 id="how-i-work" style="margin-top:70px">How I work</h2>
 
 <ul>
   <li><strong>End-to-end mindset.</strong> From data ingestion through ETL, modeling, serving, and observability, I like owning the whole pipeline.</li>
@@ -58,7 +58,7 @@ description: "Computer Science MSc student, full-stack problem solver, and lifel
   <li><strong>Comfortable in multidisciplinary teams.</strong> Happy to mentor, happy to learn, with a high tolerance for hairy problems.</li>
 </ul>
 
-<h2 id="outside-code">Outside code</h2>
+<h2 id="outside-code" style="margin-top:70px">Outside code</h2>
 
 <p>When I'm not coding, I'm reading about distributed systems and sketching ideas for the next side project. I speak Portuguese (native, C2) and English (B2).</p>
 

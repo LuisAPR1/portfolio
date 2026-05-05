@@ -22,8 +22,8 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.3in}
 
 \urlstyle{same}
 
@@ -82,9 +82,11 @@
     \textbf{\Huge \scshape Lu\'is  Rosa} \\ \vspace{5pt}
     \small +351 935 601 172 $|$ \href{mailto:luis.rosa17@hotmail.com}{\underline{luis.rosa17@hotmail.com}} $|$ 
     \href{https://linkedin.com/in/luisAPR1}{\underline{linkedin.com/in/luisapr1}} $|$
-    \href{https://github.com/LuisAPR1}{\underline{github.com/LuisAPR1}} \\
+    \href{https://github.com/LuisAPR1}{\underline{github.com/LuisAPR1}} $|$
+    \href{https://luisapr1.tech}{\underline{luisapr1.tech}} \\
     \small Agualva-Cac\'em, Lisbon, Portugal
 \end{center}
+\vspace{-20pt}
 
 \section{Education}
   \resumeSubHeadingListStart
@@ -104,7 +106,7 @@
       {DigitSigma}{Loul\'e, Portugal}
       \resumeItemListStart
         \resumeItem{Development of Web applications and Windows Forms (.NET).}
-        \resumeItem{Database management and implementation of full-stack features.}
+        \resumeItem{Database management, REST API integration, and development of full-stack features.}
         \resumeItem{Technologies used: C\#, PHP, JavaScript, HTML, Bootstrap, Axios, and Ajax.}
       \resumeItemListEnd
 
@@ -114,55 +116,42 @@
     \resumeSubHeadingListStart
     
       \resumeProjectHeading
+          {\textbf{ETL \& OLAP Data Warehouse Pipeline} $|$ \emph{SQL, Pentaho (PDI/PRD), Mondrian, MySQL, MDX, Saiku, Docker}}{}
+          \resumeItemListStart
+            \resumeItem{Development of a complete Business Intelligence solution analysing $\sim$1.3M UK real estate transaction records (HM Land Registry Price Paid Data) through a fully Dockerised pipeline for end-to-end reproducibility.}
+            \resumeItem{Data Warehouse design (Kimball Star Schema) and dual ETL implementation in Pentaho Data Integration and idempotent pure SQL (recursive CTEs, set-based upserts) for cross-platform portability.}
+            \resumeItem{OLAP cube modelling and KPI dashboards (Saiku, MDX) tracking metrics enabling data-driven decision-making.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{ML Prediction Pipeline} $|$ \emph{Python, Scikit-learn, Pandas, ARIMA, LSTM}}{}
+          \resumeItemListStart
+            \resumeItem{End-to-end Data Science pipeline applied to multiple real-world problems, including road accident severity prediction, flight cancellation detection, and traffic volume forecasting.}
+            \resumeItem{Implementation and benchmarking of multiple classification models (Na\"ive Bayes, KNN, Decision Trees, Random Forest, Gradient Boosting, MLP) with a focus on realistic imbalanced class scenarios and hyperparameter tuning.}
+            \resumeItem{Time series forecasting on high-frequency traffic data, comparing classical statistical methods (ARIMA) with deep learning approaches (LSTM) to support transportation infrastructure planning.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
           {\textbf{Permissioned Blockchain \& BFT Consensus} $|$ \emph{Java, Hyperledger Besu, Solidity, UDP}}{}
           \resumeItemListStart
             \resumeItem{End-to-end development of DepChain, a highly dependable permissioned blockchain system, implementing both the consensus layer and a transaction processing engine to ensure Byzantine Fault Tolerance (BFT).}
             \resumeItem{Systematic implementation of the Basic HotStuff consensus algorithm over unreliable networks (UDP), building network abstractions such as authenticated perfect links and failure detectors to handle crash and malicious faults.}
-            \resumeItem{Integration of EVM (Hyperledger Besu) for executing Solidity smart contracts, featuring a custom gas-fee mechanism and an ERC-20 token implementation  redesigned to prevent Approval Frontrunning attacks.}
+            \resumeItem{Integration of EVM (Hyperledger Besu) for executing Solidity smart contracts, featuring a custom gas-fee mechanism and an ERC-20 token implementation redesigned to prevent Approval Frontrunning attacks.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{Classification \& Time Series Forecasting} $|$ \emph{Python, Scikit-learn, ARIMA, LSTM}}{}
+          {\textbf{Distributed Key-Value Store} $|$ \emph{Python, FastAPI, Redis, RabbitMQ, CockroachDB, Docker, Kubernetes}}{}
           \resumeItemListStart
-            \resumeItem{End-to-end Data Science pipeline applied to two real-world problems: predicting road accident severity and detecting flight cancellations, supporting decision-making in safety and logistics.}
-            \resumeItem{Systematic implementation and comparison of multiple classification models (Na\"ive Bayes, KNN, Decision Trees, Random Forest, Gradient Boosting, MLP) with a focus on imbalanced class scenarios.}
-            \resumeItem{Traffic volume forecasting on high-frequency time series, exploring statistical models (ARIMA) and deep learning (LSTM) to support transportation infrastructure planning.}
+            \resumeItem{Design and implementation of a fault-tolerant distributed key-value storage system, capable of managing data across multiple nodes with strong consistency and high availability guarantees.}
+            \resumeItem{Multi-tier architecture combining a FastAPI service layer, Redis-based caching, RabbitMQ message queues for asynchronous coordination, and CockroachDB as the distributed persistent backend.}
+            \resumeItem{Cloud-native deployment with Docker containers orchestrated by Kubernetes, including monitoring, health checks, and Horizontal Pod Autoscaling (HPA) to ensure resilience under node failures and dynamic load.}
           \resumeItemListEnd
-          
-      \resumeProjectHeading
-          {\textbf{UK Real Estate Data Warehouse \& Analytics} $|$ \emph{SQL, Pentaho (ETL/OLAP), MySQL, MDX}}{}
-          \resumeItemListStart
-            \resumeItem{Development of a complete Business Intelligence solution for the analysis of millions of UK real estate transaction records (Price Paid Data).}
-            \resumeItem{Data Warehouse design (Star Schema) and implementation of complex ETL pipelines with Pentaho Data Integration for temporal and geographical data transformation.}
-            \resumeItem{Creation of OLAP cubes and strategic reports (Saiku/Report Designer) to monitor KPIs such as year-over-year growth and sales by district, enabling data-driven decision-making.}
-          \resumeItemListEnd
-          
-      \resumeProjectHeading
-          {\textbf{MNIST Neural Network} $|$ \emph{Python, Multi-layer Neural Network, NumPy}}{}
-          \resumeItemListStart
-            \resumeItem{Implementation of a Multi-layer Neural Network (MLP) for handwritten digit classification (MNIST).}
-            \resumeItem{Development and application of the Backpropagation algorithm for model training and weight adjustment.}
-            \resumeItem{Use of cross-validation for optimisation and evaluation of pattern recognition accuracy.}
-          \resumeItemListEnd
-          
-      \resumeProjectHeading
-          {\textbf{Distributed Key-Value Store} $|$ \emph{FastAPI, Redis, RabbitMQ, CockroachDB}}{}
-          \resumeItemListStart
-            \resumeItem{Implementation of a distributed storage solution capable of managing key-value pairs across multiple nodes.}
-            \resumeItem{Resilient architecture featuring an API layer, caching, message queues, and a distributed database.}
-            \resumeItem{Implementation of monitoring, autoscaling, and health checks to ensure consistency and fault tolerance.}
-          \resumeItemListEnd
-          
     \resumeSubHeadingListEnd
 
-\section{Technical Skills}
+\section{Languages}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: C\#, Java, Python, JavaScript, PHP, SQL, HTML/CSS, C/C++} \\
-     \textbf{Frameworks/Libraries}{: React, Node.js, Express, FastAPI, .NET, Scikit-learn, Material-UI, Bootstrap} \\
-     \textbf{Data \& Analytics}{: MySQL, Pentaho (PDI/Report Designer), OLAP, MDX, ARIMA, LSTM, Pandas, NumPy, Redis, RabbitMQ, CockroachDB} \\
-     \textbf{Infrastructure \& Tools}{: Git, Docker, Arduino} \\
-     \textbf{Spoken Languages}{: Portuguese (Native/C2), English (B2)}
+     Portuguese (Native/C2), English (B2)
     }}
  \end{itemize}
 

@@ -1,13 +1,13 @@
 ---
 title: "2D Physics Engine"
-description: "An interactive 2D physics sandbox built from scratch with p5.js — rigid body dynamics, AABB collision detection, and Verlet integration for stable, energy-conserving simulations. Live in the browser."
+description: "Interactive 2D physics simulation built from scratch with p5.js. Implements rigid body dynamics, AABB collision detection, friction/restitution control, and Verlet integration for energy-stable long-running simulations, with real-time control over body parameters."
 tech_stack:
   - "JavaScript"
-  - "HTML"
-  - "CSS"
+  - "p5.js"
 live_url: "https://luisapr1.github.io/PhysicsEngine/"
 live_label: "Try the live demo"
-weight: 100
+group: "Games & Graphics"
+weight: 130
 ---
 
 <div>

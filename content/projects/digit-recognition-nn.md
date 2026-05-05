@@ -1,9 +1,12 @@
 ---
-title: "Neural Network from Scratch (V1)"
-description: "The original from-scratch feed-forward neural network in pure Java — single hidden layer with sigmoid activation, backpropagation, MSE convergence tracking, and persistent weights. The starting point that became the V2 MNIST classifier."
+title: "MNIST Digit Recognition — V1"
+description: "Earlier educational feedforward neural network in pure Java (sigmoid activations + backpropagation) with MSE convergence checking and CSV weight serialization. Built without any external ML library, focused on the core mechanics of training and inference."
 tech_stack:
   - "Java"
-weight: 110
+live_url: "https://github.com/LuisAPR1/Digit-Recognition-NN"
+live_label: "View on GitHub"
+group: "Data Engineering & Machine Learning"
+weight: 60
 ---
 
 <div>

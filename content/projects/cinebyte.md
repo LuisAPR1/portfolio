@@ -1,14 +1,18 @@
 ---
-title: "CineByte — Movies & TV Discovery App"
-description: "A full-stack web application for discovering movies and TV shows, with TMDb-powered browsing, advanced search, JWT authentication with email verification, and a personal favorites system. Built with React, TypeScript, and Express."
+title: "CineByte — Movie & TV Discovery App"
+description: "Full-stack web app for movie and TV show discovery, with a React + TypeScript frontend and an Express + TypeScript backend. Integrates the TMDb API for browsing, search, and metadata, plus JWT authentication with bcrypt password hashing, SMTP-based account verification, and a per-user favorites system."
 tech_stack:
   - "React"
   - "TypeScript"
   - "Node.js"
-  - "JavaScript"
-live_url: "https://github.com/LuisAPR1/web-api-integration-app"
+  - "Express"
+  - "NeDB"
+  - "TMDb API"
+  - "JWT"
+live_url: "https://github.com/LuisAPR1/React-Ts-REST-API-Movie-App"
 live_label: "View on GitHub"
-weight: 40
+group: "Full-Stack & Web"
+weight: 90
 ---
 
 <div class="mt-8">

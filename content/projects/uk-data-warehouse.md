@@ -1,9 +1,18 @@
 ---
-title: "UK Real Estate Data Warehouse & OLAP Cube"
-description: "End-to-end data-engineering pipeline over ~1.3M UK property sales: from raw CSVs to a MySQL star schema, a Mondrian OLAP cube, and a PDF analytical report. Two interchangeable ETL paths (Pentaho + pure SQL), reproducible via Docker."
+title: "ETL & OLAP Data Warehouse Pipeline"
+description: "End-to-end Business Intelligence pipeline over ~1.3M UK real-estate transaction records (HM Land Registry Price Paid Data). Includes a Kimball star schema, dual ETL implementation (Pentaho + idempotent pure SQL with recursive CTEs), Mondrian OLAP cube consumed via Saiku/MDX, and pixel-perfect PDF reports — fully Dockerized for reproducibility."
 tech_stack:
+  - "SQL"
+  - "Pentaho"
+  - "Mondrian"
+  - "MySQL"
+  - "MDX"
+  - "Saiku"
   - "Docker"
-weight: 50
+live_url: "https://github.com/LuisAPR1/ETL-OLAP-DataWarehouse-Pipeline"
+live_label: "View on GitHub"
+group: "Data Engineering & Machine Learning"
+weight: 30
 ---
 
 <div>

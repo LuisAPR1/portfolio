@@ -1,10 +1,15 @@
 ---
-title: "Flight Cancellation Predictor"
-description: "A machine-learning web app that predicts flight cancellations using six different classifiers (Naive Bayes, KNN, Logistic Regression, Decision Tree, MLP, Random Forest), with batch evaluation and a real-time inference UI."
+title: "ML Prediction Pipeline"
+description: "End-to-end Data Science web app for flight cancellation prediction. Includes a preprocessing pipeline (cyclic temporal encoding, ordinal encoding, MinMax scaling), six classification models (Naïve Bayes, KNN, Logistic Regression, Decision Tree, MLP, Random Forest), and FastAPI endpoints for single-flight inference and batch model evaluation."
 tech_stack:
   - "Python"
   - "FastAPI"
-weight: 60
+  - "Scikit-learn"
+  - "Pandas"
+live_url: "https://github.com/LuisAPR1/ML-Prediction-Pipeline"
+live_label: "View on GitHub"
+group: "Data Engineering & Machine Learning"
+weight: 40
 ---
 
 <div>

@@ -1,17 +1,18 @@
 ---
 title: "Distributed Key-Value Storage System"
-description: "A horizontally-scalable, fault-tolerant key-value store with API nodes, Redis caching, RabbitMQ async processing, CockroachDB persistent storage, and Prometheus/Grafana observability — all wired up with Docker Compose and an autoscaler."
+description: "Fault-tolerant distributed key-value store with strong consistency and high availability. Multi-tier architecture (FastAPI + Redis + RabbitMQ + CockroachDB) deployed cloud-native on Kubernetes with Horizontal Pod Autoscaling, Prometheus/Grafana monitoring, and continuous health checks."
 tech_stack:
   - "Python"
   - "FastAPI"
-  - "Docker"
   - "Redis"
   - "RabbitMQ"
   - "CockroachDB"
-  - "Nginx"
+  - "Docker"
+  - "Kubernetes"
 live_url: "https://github.com/LuisAPR1/Distributed-Key-Value-Storage-System"
 live_label: "View on GitHub"
-weight: 20
+group: "Distributed Systems & Backend"
+weight: 10
 ---
 
 <div class="mt-8">

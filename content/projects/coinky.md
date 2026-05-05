@@ -1,11 +1,16 @@
 ---
-title: "COINKY — Digital Banking System"
-description: "A web banking application in PHP that manages multiple financial accounts (Main, Savings, Reserve), with inter-account transfers, balance evolution charts, transaction history, and a separate admin panel. Built on a hand-rolled MVC architecture without external frameworks."
+title: "Digital Banking System"
+description: "Web banking platform built on a custom PHP MVC architecture (no external framework). Manages three account types (Main, Savings, Reserve) with inter-account transfers, transaction history, real-time balance charts (Chart.js), an administrative panel, and security via password_hash and prepared statements."
 tech_stack:
+  - "PHP"
+  - "MySQL"
   - "JavaScript"
-  - "HTML"
-  - "CSS"
-weight: 80
+  - "Chart.js"
+  - "Bootstrap"
+live_url: "https://github.com/LuisAPR1/Coinky"
+live_label: "View on GitHub"
+group: "Full-Stack & Web"
+weight: 100
 ---
 
 <div>

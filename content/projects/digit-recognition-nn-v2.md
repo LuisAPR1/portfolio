@@ -1,6 +1,6 @@
 ---
-title: "MNIST Digit Recognition — Neural Network from Scratch"
-description: "A feed-forward neural network for handwritten digit classification, written from scratch in pure Java (no ML frameworks), paired with a responsive web playground that lets you sketch a digit and see live top-5 predictions."
+title: "MNIST Digit Recognition — V2"
+description: "From-scratch Java MLP (256 → 128, ReLU + Softmax) trained with mini-batch SGD and cross-entropy loss on MNIST, with no external ML libraries. Paired with a responsive web playground for live in-browser sketching, real-time inference, and top-5 prediction visualization."
 tech_stack:
   - "Java"
   - "JavaScript"
@@ -8,7 +8,8 @@ tech_stack:
   - "CSS"
 live_url: "https://luisapr1.github.io/Digit-Recognition-NN-V2/"
 live_label: "Try the live demo"
-weight: 30
+group: "Data Engineering & Machine Learning"
+weight: 50
 ---
 
 <div class="mt-8">

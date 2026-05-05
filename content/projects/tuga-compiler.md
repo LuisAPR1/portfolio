@@ -1,8 +1,12 @@
 ---
-title: "Tuga — Compiler & Stack VM"
-description: "A complete compiler and stack-based virtual machine for the Tuga programming language (a small imperative language with Portuguese keywords), written in Java with ANTLR 4. Covers lexing, parsing, semantic analysis, code generation, and execution."
+title: "Tuga Compiler & Virtual Machine"
+description: "Full compilation pipeline for Tuga, an imperative language with Portuguese-based keywords. Includes ANTLR-generated lexer/parser, two-phase semantic analysis (scoped symbol table + type checking), bytecode generation, and a custom stack-based virtual machine (S-VM) supporting functions, locals, control flow, and forward references."
 tech_stack:
   - "Java"
+  - "ANTLR 4"
+live_url: "https://github.com/LuisAPR1/Compiler-For-Tuga-Language"
+live_label: "View on GitHub"
+group: "Compilers & Programming Languages"
 weight: 70
 ---
 

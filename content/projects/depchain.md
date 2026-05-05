@@ -1,13 +1,17 @@
 ---
-title: "DepChain — Permissioned Blockchain"
-description: "A highly-dependable permissioned blockchain implementing Basic HotStuff BFT consensus over UDP, EVM smart-contract execution, and an ERC-20 token with frontrunning-resistant approvals."
+title: "DepChain — Permissioned Blockchain with BFT Consensus"
+description: "Permissioned blockchain implementing the Basic HotStuff BFT consensus over UDP, with a layered link stack (FairLoss → Stubborn → Authenticated Perfect Links via X25519 DH + HMAC), BLS threshold-signed Quorum Certificates, EVM execution via Hyperledger Besu, and a frontrunning-resistant ERC-20 token. Tolerates f = ⌊(n−1)/3⌋ Byzantine replicas."
 tech_stack:
   - "Java"
+  - "Hyperledger Besu"
   - "Solidity"
-  - "Docker"
-live_url: "https://github.com/LuisAPR1/DepChain"
+  - "UDP"
+  - "BLS"
+  - "Ed25519"
+live_url: "https://github.com/LuisAPR1/Permissioned-Blockchain-with-BFT-Consensus"
 live_label: "View on GitHub"
-weight: 10
+group: "Distributed Systems & Backend"
+weight: 20
 ---
 
 <div class="mt-8">

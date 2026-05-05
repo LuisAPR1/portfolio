@@ -1,12 +1,50 @@
 {{ define "main" }}
 <h1 class="mb-0">{{ .Title }}</h1>
 {{ with or .Description .Params.description }}<p class="mt-1 text-gray-400 mb-4">{{ . }}</p>{{ end }}
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-  {{ range .Pages.ByWeight }}
+
+{{ $allPages := .Pages.ByWeight }}
+{{ $groups := slice
+  "Distributed Systems & Backend"
+  "Data Engineering & Machine Learning"
+  "Compilers & Programming Languages"
+  "Full-Stack & Web"
+  "Games & Graphics"
+}}
+
+{{ range $g := $groups }}
+  {{ $items := where $allPages "Params.group" $g }}
+  {{ if $items }}
+  <h2 class="text-3xl font-semibold" style="margin-top:3.5rem;margin-bottom:1.5rem;padding-bottom:1.25rem;border-bottom:1px solid #27272a">{{ $g }}</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {{ range $items }}
+    <a href="{{ .RelPermalink }}" class="group relative card overflow-hidden p-0 custom">
+      {{ with .Params.cover_image }}<img src="{{ . }}" alt="{{ .Title }}" class="w-full aspect-video object-cover">{{ end }}
+      <div class="p-4">
+        <h3 class="text-2xl font-semibold mb-2 custom" style="margin-top:0">{{ .Title }}</h3>
+        {{ with .Params.tech_stack }}
+        <div class="flex gap-2 flex-wrap mb-2 custom">
+          {{ range . }}{{ partial "tech-icon.html" . }}{{ end }}
+        </div>
+        {{ end }}
+        {{ with or .Description .Params.description }}<p class="text-gray-400 mb-0">{{ . }}</p>{{ end }}
+        <span class="text-accent font-semibold mt-3 inline-block">Learn more &rarr;</span>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+  {{ end }}
+{{ end }}
+
+{{/* Fallback: render any project without a recognized group at the bottom */}}
+{{ $ungrouped := where $allPages "Params.group" "in" (slice "" nil) }}
+{{ if $ungrouped }}
+<h2 class="text-3xl font-semibold" style="margin-top:3.5rem;margin-bottom:1.5rem;padding-bottom:1.25rem;border-bottom:1px solid #27272a">Other</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  {{ range $ungrouped }}
   <a href="{{ .RelPermalink }}" class="group relative card overflow-hidden p-0 custom">
-    {{ with .Params.cover_image }}<img src="{{ . }}" alt="{{ $.Title }}" class="w-full aspect-video object-cover">{{ end }}
+    {{ with .Params.cover_image }}<img src="{{ . }}" alt="{{ .Title }}" class="w-full aspect-video object-cover">{{ end }}
     <div class="p-4">
-      <h2 class="text-2xl font-semibold mb-2">{{ .Title }}</h2>
+      <h3 class="text-2xl font-semibold mb-2 custom" style="margin-top:0">{{ .Title }}</h3>
       {{ with .Params.tech_stack }}
       <div class="flex gap-2 flex-wrap mb-2 custom">
         {{ range . }}{{ partial "tech-icon.html" . }}{{ end }}
@@ -18,4 +56,5 @@
   </a>
   {{ end }}
 </div>
+{{ end }}
 {{ end }}

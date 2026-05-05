@@ -93,13 +93,15 @@
     </div>
     {{ end }}
   </section>
-  <a href="{{ "resume/#experience" | relURL }}" class="text-accent font-semibold mt-4 inline-block">Full education &amp; work history &rarr;</a>
+  <a href="{{ "resume/" | relURL }}" class="text-accent font-semibold mt-4 inline-block">Full education &amp; work history &rarr;</a>
 
-  {{/* ---------- Featured projects (top 3 by weight; full list at /projects/) ---------- */}}
+  {{/* ---------- Featured projects (top 2 by weight, excluding depchain; full list at /projects/) ---------- */}}
   <section id="projects" class="mt-16">
     <h1>Featured projects</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      {{ range first 3 (where (where site.RegularPages "Section" "projects") "Kind" "page").ByWeight }}
+      {{ $projects := (where (where site.RegularPages "Section" "projects") "Kind" "page").ByWeight }}
+      {{ $homepageProjects := where $projects "File.BaseFileName" "ne" "depchain" }}
+      {{ range first 2 $homepageProjects }}
       <a href="{{ .RelPermalink }}" class="group relative card overflow-hidden p-0 custom block">
         {{ with .Params.cover_image }}<img src="{{ . }}" alt="{{ $.Title }}" class="w-full aspect-video object-cover" loading="lazy">{{ end }}
         <div class="p-4">

@@ -23,6 +23,9 @@ __pycache__/
 /site/
 /output/
 
+# Local-only binaries (GitHub CLI portable)
+/gh-cli/
+
 # Local Netlify folder
 .netlify
 

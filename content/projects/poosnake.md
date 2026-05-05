@@ -1,9 +1,14 @@
 ---
-title: "POOSnake — Snake Remix"
-description: "A modern remake of the classic Snake game with both Swing-based GUI and console interfaces, manual and AI-pathfinding modes, customizable arena, dynamic rotating obstacles, a leaderboard, and JUnit-tested core mechanics."
+title: "Snake Game Remix"
+description: "OOP remake of classic Snake with both graphical (Swing) and textual (CLI) interfaces. Features manual and automatic (pathfinding) play modes, customizable arena and food types, dynamic rotating obstacles, and a leaderboard — built with OOP patterns (Singleton, Abstract Factory, Strategy) and JUnit-tested."
 tech_stack:
   - "Java"
-weight: 90
+  - "Swing"
+  - "JUnit"
+live_url: "https://github.com/LuisAPR1/OOP-Remix-of-Snake-Game"
+live_label: "View on GitHub"
+group: "Games & Graphics"
+weight: 120
 ---
 
 <div>
